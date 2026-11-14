@@ -298,6 +298,7 @@ function openEnv(){
   var env = document.getElementById('env'), intro = document.getElementById('intro');
   if (!env || env.classList.contains('open')) return;
   env.classList.add('open');
+if (au) au.play().then(function(){ mb.classList.add('on'); }).catch(function(){});
   setTimeout(function(){ intro.classList.add('gone'); document.body.classList.remove('locked'); window.scrollTo(0,0); }, 2200);
   setTimeout(function(){ intro.remove(); }, 3400);
 }
